@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
+
+/* -------------------------------------Special Styling */
+/* Added to prevent the problems of elements overflowing horizontally on mobile devices */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Castoro', serif;
+}
+
+.row,
+.container-fluid {
+        overflow-x: hidden;
+}
+
+/* ------------------------------------- Background Colour Animation  */
+
+
+body {
+    text-align: center;
+
+    /* CSS Styling and animation keyframes created with https://www.gradient-animator.com/ */
+    background: #0c0fa3;
+    background-size: 2000% 2000%;
+}
+    /* background: linear-gradient(270deg, #f72525, #b56117, #b7a609, #49ad0b, #0ca8a3, #0c0fa3, #9137c9, #ee43dd, #b1b0b0, #000000);
+    background-size: 2000% 2000%;
+    animation: linear-gradient 30s ease infinite;
+}
+
+@keyframes linear-gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+} */
+
+/* End of CSS Styling from https://www.gradient-animator.com/ */
+
+/* -------------------------------------HEADER SECTION */
+
+
+
+/* -------------------------------------MAIN BODY STYLING */
+/* -------------------------------------Clock Canvas */
+
+#clockCanvas {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 10vh auto 0 auto;
+}
+
+/* -------------------------------------Bell Icon */
+
+#alarmBell {
+    font-size: 50px;
+    width: 100%;
+    height: auto;
+    margin: 2vh auto;
+    color: #fff;
+  }
+
+/* CSS shake an image code adapted from https://www.w3schools.com/howto/howto_css_shake_image.asp */
+
+.bell-icon-shake {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+/* -------------------------------------Accordion cards*/
+
+.accordion {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0 auto 0 auto;
+}
+
+.accordion > .card {
+    border-radius: 40px 0 40px 0;
+    border-bottom: 5px solid rgba(0,0,0,.25);;
+}
+
+.form-control {
+    display: inline-block;
+    width: 65px;
+    font-size: 1.2rem;
+}
+
+#alarmMins {
+    margin-right: 15px;
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.card-header h2 {
+    margin-bottom: 12px;
+}
+
+.card-header:hover {
+    background-color: #a2e5fa;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+/* -------------------------------------Accordion buttons */
+
+.btn-shape {
+    height: 40px;
+    width: 100px;
+    border-radius: 15px 0;
+}
+
+.btn-green {
+    color: #fff;
+    background-color: #28A745;
+    border-color: #28A746;
+}
+
+.btn-green:hover {
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+    box-shadow: 0 0 0 .2rem rgba(72,180,97,.5);
+}
+
+.btn-red {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3546;
+}
+
+.btn-red:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+    box-shadow: 0 0 0 .2rem rgba(225,83,97,.5);
+}
+
+.btn-link {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #444;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    text-decoration: underline #444;
+    color: #444;
+}
+
+
+/* -------------------------------------FOOTER SECTION */
+
+.footer-container h4 {
+    /*font-family: 'Oswald', sans-serif;*/
+    font-weight: 500;
+    color: #fff;
+  }
+  
+  .social-media ul li {
+    font-size: 1.6rem;
+    padding: 2%;
+  }
+  
+  .social-media ul li a {
+      color: #444;
+  }
+  
+  .social-media ul li a:hover {
+      color: #fff;
+  }
+  
+  .icon-bg-sm ul li a i {
+    height: 50px;
+    width: 50px;
+    padding: 12px 0;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .icon-bg-sm ul li a i:hover {
+      background-color: #444;
+  }
+
+  .copyright {
+      color: #fff;
+  }
+
+/* -------------------------------------Media Queries */
+/* -------------------------------------Responsive Design - mobile */
+
+@media only screen and (max-width: 578px) {
+    #clockCanvas {
+        width: 100%;
+        height: auto;
+        max-width: 500px;
+        max-height: 500px;
+        margin: 20px auto 0 auto;
+    }
+}
